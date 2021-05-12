@@ -1,0 +1,201 @@
+Description: Get all the tshirts from the database
+Endpoint: http://localhost:3002/api/v1/tshirt/get-all-tshirts
+Method: POST
+Params: none
+Request Payload: none
+Response:
+{
+    "message": "success",
+    "resp": {
+        "data": [
+            {
+                "id": 1,
+                "brand": "Gildan",
+                "model": null,
+                "color": "Black",
+                "size": "M",
+                "image_url": null,
+                "user_id": null,
+                "active": true,
+                "created_by": "saulm24",
+                "updated_by": null,
+                "created_at": "2021-05-12T19:20:40.925Z",
+                "updated_at": "2021-05-12T19:20:40.925Z",
+                "deleted_at": null
+            },
+            {
+                "id": 2,
+                "brand": "Gildan",
+                "model": null,
+                "color": "Black",
+                "size": "L",
+                "image_url": null,
+                "user_id": null,
+                "active": true,
+                "created_by": "saulm24",
+                "updated_by": null,
+                "created_at": "2021-05-12T19:21:40.273Z",
+                "updated_at": "2021-05-12T19:21:40.273Z",
+                "deleted_at": null
+            },
+            {
+                "id": 3,
+                "brand": "Gildan",
+                "model": null,
+                "color": "Red",
+                "size": "L",
+                "image_url": null,
+                "user_id": null,
+                "active": true,
+                "created_by": "saulm24",
+                "updated_by": null,
+                "created_at": "2021-05-12T19:21:48.893Z",
+                "updated_at": "2021-05-12T19:21:48.893Z",
+                "deleted_at": null
+            },
+            {
+                "id": 4,
+                "brand": "Gildan",
+                "model": null,
+                "color": "Green",
+                "size": "L",
+                "image_url": null,
+                "user_id": null,
+                "active": true,
+                "created_by": "saulm24",
+                "updated_by": null,
+                "created_at": "2021-05-12T19:21:56.893Z",
+                "updated_at": "2021-05-12T19:21:56.893Z",
+                "deleted_at": null
+            }
+        ],
+        "statusCode": 200
+    }
+}
+
+------------------------------------------------------------------
+
+Description: Get a tshirt by its ID from the database
+Endpoint: http://localhost:3002/api/v1/tshirt/get-tshirt-by-id/2
+Method: POST
+Params: 2
+Request Payload: none
+Response:
+{
+    "message": "success",
+    "resp": {
+        "data": [
+            {
+                "id": 2,
+                "brand": "Gildan",
+                "model": null,
+                "color": "Black",
+                "size": "L",
+                "image_url": null,
+                "user_id": null,
+                "active": true,
+                "created_by": "saulm24",
+                "updated_by": null,
+                "created_at": "2021-05-12T19:21:40.273Z",
+                "updated_at": "2021-05-12T19:21:40.273Z",
+                "deleted_at": null
+            }
+        ],
+        "statusCode": 200
+    }
+}
+
+-------------------------------------------------------------------
+
+Description: Create a new tshirt record
+Endpoint: http://localhost:3002/api/v1/tshirt/create-tshirt
+Method: POST
+Params: none
+Request Payload:
+{
+    "brand": "Carthartt",
+    "color": "Green",
+    "size": "XL"
+}
+Response:
+{
+    "message": "success",
+    "resp": {
+        "data": {
+            "id": 5,
+            "brand": "Carthartt",
+            "model": null,
+            "color": "Green",
+            "size": "XL",
+            "image_url": null,
+            "user_id": null,
+            "active": true,
+            "created_by": "saulm24",
+            "updated_by": null,
+            "created_at": "2021-05-12T19:54:38.543Z",
+            "updated_at": "2021-05-12T19:54:38.543Z",
+            "deleted_at": null
+        },
+        "statusCode": 200
+    }
+}
+
+--------------------------------------------------------------------
+
+Description: Update a tshirt record
+Endpoint: http://localhost:3002/api/v1/tshirt/update-tshirt/id/7
+Method: PUT
+Params: 7
+Request Payload:
+{
+    "brand": "Carthartt",
+    "color": "Orange",
+    "size": "S"
+}
+Response:
+{
+    "message": "success",
+    "resp": {
+        "data": {
+            "id": 7,
+            "brand": "Carthartt",
+            "model": null,
+            "color": "Orange",
+            "size": "S",
+            "image_url": null,
+            "user_id": null,
+            "active": true,
+            "created_by": "saulm24",
+            "updated_by": "saulm24",
+            "created_at": "2021-05-12T19:55:52.443Z",
+            "updated_at": "2021-05-12T19:57:00.598Z",
+            "deleted_at": null
+        },
+        "statusCode": 200
+    }
+}
+
+--------------------------------------------------------------------
+
+Description: Delete a tshirt record
+Endpoint: http://localhost:3002/api/v1/tshirt/delete-tshirt/id/7
+Method: DELETE
+Params: 7
+Request Payload: none
+Response:
+{
+    "message": "success",
+    "resp": {
+        "data": {
+            "command": "DELETE",
+            "rowCount": 1,
+            "oid": null,
+            "rows": [],
+            "fields": [],
+            "_parsers": [],
+            "RowCtor": null,
+            "rowAsArray": false
+        },
+        "statusCode": 200
+    }
+}
